@@ -5,16 +5,16 @@
     "version": "0.0.1",
     "browser_action": {
         "default_icon": {
-            "128": "B2-128.png"
+            "128": "icons/B2-128.png"
         },
         "default_popup": "popup.html",
         "default_title": "open the popup"
     },
     "content_scripts":[{
         "css": [],
-        "js": [ "js/export.js"],
+        "js": ["js/export.js"],
         "matches": [ "*://game.granbluefantasy.jp/*", "*://gbf.game.mbga.jp/*" ],
-        "run_at": [ "document_start" ]
+        "run_at": "document_start"
     }],
     "background": {
         "page": "background.html"
@@ -22,7 +22,6 @@
     "permissions": [
         "clipboardRead",
         "clipboardWrite",
-        "notifications",
         "webRequest",
         "webRequestBlocking",
         "alarms",
