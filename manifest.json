@@ -10,6 +10,12 @@
         "default_popup": "popup.html",
         "default_title": "open the popup"
     },
+    "content_scripts":[{
+        "css": [],
+        "js": [ "js/export.js"],
+        "matches": [ "*://game.granbluefantasy.jp/*", "*://gbf.game.mbga.jp/*" ],
+        "run_at": [ "document_start" ]
+    }],
     "background": {
         "page": "background.html"
     },
