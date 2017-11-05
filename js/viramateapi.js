@@ -6,6 +6,9 @@ var nextRequestId = 1;
 
 var lastRaidState = null;
 
+var textarea = document.getElementById("ta1");
+
+window.addEventListener("DOMContentLoaded", onLoad, false);
 
 function onLoad () {
     window.addEventListener("message", onMessage, false);
@@ -22,6 +25,10 @@ function tryLoadApi () {
 function onApiLoaded () {
     console.log("API loaded");
     isApiLoaded = true;
+    if(isApiLoaded)
+    {
+        tryGetCombatState();
+    }
 };
 
 function onMessage (evt) {
@@ -63,10 +70,12 @@ function tryGetCombatState () {
     sendApiRequest({type: "getCombatState"}, function (combatState) {
         if (combatState) {
             lastRaidState = combatState;
+
+            textarea.value = lastRaidState.raidCode + " :参戦ID" + '\n' + "参加者募集！" + '\n'+ lastRaidState.enemies[0].name.en;
+            textarea.select();
+            document.execCommand("copy", false, null);
         } else {
             return;
         }
     });
 };
-
-window.addEventListener("DOMContentLoaded", onLoad, false);
