@@ -25,6 +25,7 @@
         "webRequest",
         "webRequestBlocking",
         "alarms",
+        "tabs",
         "activeTab",
         "declarativeContent",
         "storage",
