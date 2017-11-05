@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "GBF2Weibo",
     "description": "GBF Raid to Weibo",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "browser_action": {
         "default_icon": {
             "128": "icons/B2-128.png"
@@ -10,26 +10,12 @@
         "default_popup": "popup.html",
         "default_title": "open the popup"
     },
-    "content_scripts":[{
-        "css": [],
-        "js": ["js/export.js"],
-        "matches": [ "*://game.granbluefantasy.jp/*", "*://gbf.game.mbga.jp/*" ],
-        "run_at": "document_start"
-    }],
     "background": {
         "page": "background.html"
     },
     "permissions": [
         "clipboardRead",
         "clipboardWrite",
-        "webRequest",
-        "webRequestBlocking",
-        "alarms",
-        "tabs",
-        "activeTab",
-        "declarativeContent",
-        "storage",
-        "unlimitedStorage",
         "*://game.granbluefantasy.jp/*",
         "*://gbf.game.mbga.jp/*"
     ]
