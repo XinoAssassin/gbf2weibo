@@ -73,17 +73,19 @@ function tryGetCombatState () {
     sendApiRequest({type: "getCombatState"}, function (combatState) {
         if (combatState) {
             lastRaidState = combatState;
+            var count =i
             for (var i = 0 ;i < boss.length; i++)
             {
                 if ((lastRaidState.enemies[0].name.ja == boss[i].Name_EN)||(lastRaidState.enemies[0].name.ja == boss[i].Name_JP))
                 {
                     console.log(i);
+                    count = i;
                     console.log(boss[i].Name_EN);
-                    picarea.src = "/pics/" + boss[i].Name_EN +".jpg";
+                    picarea.src = "/pics/" + boss[i].Name_EN +".webp";
                     break;
                 }
             }
-            textarea.value = lastRaidState.raidCode + " :参戦ID" + '\n' + "参加者募集！" + '\n'+ lastRaidState.enemies[0].name.ja;
+            textarea.value = lastRaidState.raidCode + " :参戦ID" + '\n' + "参加者募集！" + '\n'+ boss[count].Name_JP;
             textarea.select();
             document.execCommand("copy", false, null);
         } else {
