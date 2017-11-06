@@ -10,5 +10,14 @@
 
 - [x] 获取 RiadCode 和 Boss Name
 - [x] 自动生成语句并自动复制
+- [x] 自动化读取 RaidBoss 参数和图片
 - [ ] 自动获取相应图片
 - [ ] 一键发微博
+
+## 感谢
+
+Thanks to [Katelyn Gadd](https://twitter.com/antumbral) and his [Viramate](https://chrome.google.com/webstore/detail/viramate/fgpokpknehglcioijejfeebigdnbnokj).
+
+Thanks to walfie and his [gbf-raidfinder](https://github.com/walfie/gbf-raidfinder).
+
+This project use Viramate API and gbf-raidfinder's API.

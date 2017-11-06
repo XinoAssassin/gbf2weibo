@@ -1,5 +1,5 @@
 function install_notice() {
-    if (localStorage.getItem('install_time'))
+    if (localStorage.getItem('install_time'))   
         return;
 
     var now = new Date().getTime();

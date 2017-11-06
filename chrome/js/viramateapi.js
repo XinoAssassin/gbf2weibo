@@ -7,6 +7,8 @@ var nextRequestId = 1;
 var lastRaidState = null;
 
 var textarea = document.getElementById("ta1");
+var picarea = document.getElementById("bosspic");
+var boss;
 
 window.addEventListener("DOMContentLoaded", onLoad, false);
 
@@ -27,6 +29,7 @@ function onApiLoaded () {
     isApiLoaded = true;
     if(isApiLoaded)
     {
+        readBossInfo();
         tryGetCombatState();
     }
 };
@@ -70,12 +73,31 @@ function tryGetCombatState () {
     sendApiRequest({type: "getCombatState"}, function (combatState) {
         if (combatState) {
             lastRaidState = combatState;
-
-            textarea.value = lastRaidState.raidCode + " :参戦ID" + '\n' + "参加者募集！" + '\n'+ lastRaidState.enemies[0].name.en;
+            for (var i = 0 ;i < boss.length; i++)
+            {
+                if ((lastRaidState.enemies[0].name.ja == boss[i].Name_EN)||(lastRaidState.enemies[0].name.ja == boss[i].Name_JP))
+                {
+                    console.log(i);
+                    console.log(boss[i].Name_EN);
+                    picarea.src = "/pics/" + boss[i].Name_EN +".jpg";
+                    break;
+                }
+            }
+            textarea.value = lastRaidState.raidCode + " :参戦ID" + '\n' + "参加者募集！" + '\n'+ lastRaidState.enemies[0].name.ja;
             textarea.select();
             document.execCommand("copy", false, null);
         } else {
             return;
         }
     });
-};
+}
+
+
+
+function readBossInfo(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET","newBoss.json",false);
+    xhr.send();
+    boss = JSON.parse(xhr.responseText);
+}
+

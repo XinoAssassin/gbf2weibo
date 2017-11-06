@@ -7,19 +7,26 @@
             #mainPopup {
                 padding:4px;
                 margin:0px;
-                height:10em;
-                min-width:200px;
+                
+                min-width:240px;
             }
         </style>
 </head>
 
 <body>
     <div id="mainPopup">
-        <textarea rows="4" cols="24" id="ta1" lang:"ja"></textarea>
+        <textarea rows="4" cols="32" id="ta1" lang:"ja"></textarea>
     </div>
-    <button id="button1">click me</button>
-    <script src="/js/viramateapi.js"></script>
+    <div id="bosspicdiv" style="height: 200; margin-bottom: 6px; padding: 4px;">
+        <img width=300 height=150 style="display: block" id="bosspic">
+    </div>
+
+    <div style="padding: 4px;">     
+    <button id="button1">生成</button>
+    </div>
     
+    
+    <script src="/js/viramateapi.js"></script>    
     <iframe id="api_host" style="display: none"></iframe>
 </body>
 

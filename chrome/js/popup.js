@@ -4,10 +4,10 @@ var textarea = document.getElementById("ta1");
 window.addEventListener("DOMContentLoaded", function(evt){
     console.log("dom loaded"); tryGetCombatState();}, false);
 
-button.addEventListener('click',function(){
-    handleState();
-},false);
+button.onclick = handleState();
 
 function handleState(){
-    textarea.value = lastRaidState.raidCode + lastRaidState.enemies[0].name.ja + lastRaidState.enemies[0].name.en
+    textarea.value = "";
+    textarea.value = lastRaidState.raidCode + '\n' + lastRaidState.enemies[0].name.ja +'\n' + lastRaidState.enemies[0].name.en;
+    console.log("click");
 }

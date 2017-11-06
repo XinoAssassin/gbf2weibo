@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Net;
+using System.IO;
 
 namespace BossDataCollector
 {
@@ -11,82 +13,132 @@ namespace BossDataCollector
     {
         static void Main(string[] args)
         {
-            Bosses bosses = JsonConvert.DeserializeObject<Bosses>(JsonTextReader(".\\boss.json"));
-
-            RaidBoss tmp = new RaidBoss();
-            
-            RaidBoss[] rb = new RaidBoss[bosses.RaidBosses.Length];
-            for (int x = 0; x < bosses.RaidBosses.Length; x++)
+            var boss = JsonConvert.DeserializeObject<Bosses>(GetJsonString("boss.json"));
+            RaidBoss[] rb = new RaidBoss[boss.RaidBosses.Length];
+            for (int i = 0; i < boss.RaidBosses.Length; i++)
             {
-                rb[x] = bosses.RaidBosses[x];
+                rb[i] = boss.RaidBosses[i];
+                Console.WriteLine(rb[i].Name);
             }
 
-            int i, j;
-            var count = rb.Length;
-            for (i = 1; i < count; i++)
+            OrderByLv(rb); //排序
+            Console.Clear();
+
+            model.MyBoss[] mb = new model.MyBoss[rb.Length];
+            for (int i = 0; i < rb.Length; i++)
             {
-                var t = rb[i];
-                for (j = i - 1; j >= 0 && rb[j].Level > t.Level; j--)
-                { rb[j + 1] = rb[j]; }
-                rb[j + 1] = t;
-            }
-            for (int x = 0; x < bosses.RaidBosses.Length; x++)
-            {
-                Console.WriteLine(rb[x].Name);
-            }
-            Console.ReadKey();
+                mb[i] = new model.MyBoss();
 
-
-        }
-
-        public static void InsertSort(double[] data)
-        {
-            int i, j;
-            var count = data.Length;
-            for (i = 1; i < count; i++)
-            {
-                var t = data[i];
-                for (j = i - 1; j >= 0 && data[j] > t; j--)
-                    data[j + 1] = data[j];
-                data[j + 1] = t;
-
-            }
-        }
-
-        static void BubbleSort(int[] intArray)
-        {
-            int temp = 0;
-            bool swapped;
-            for (int i = 0; i < intArray.Length; i++)
-            {
-                swapped = false;
-                for (int j = 0; j < intArray.Length - 1 - i; j++)
+                if (rb[i].Name.Contains("Lvl"))
                 {
-                    if (intArray[j] > intArray[j + 1])
-                    {
-                        temp = intArray[j];
-                        intArray[j] = intArray[j + 1];
-                        intArray[j + 1] = temp;
-                        if (!swapped)
-                            swapped = true;
-                    }
-                    if (!swapped)
-                        return;
+                    mb[i].Name_EN = rb[i].Name;
+                    mb[i].Name_JP = rb[i].TranslatedName.Value;
+                    
+                }
+                else
+                {
+                    mb[i].Name_JP = rb[i].Name;
+                    mb[i].Name_EN = rb[i].TranslatedName.Value;
+                }
+                mb[i].Lv = rb[i].Level;
+                mb[i].Pic_URL = rb[i].Image.Value;
+                Console.WriteLine("{0}, {1}", mb[i].Name_EN, mb[i].Name_JP);
+            }
+
+            List<model.MyBoss> list = new List<model.MyBoss>();
+            foreach (var _mb in mb)
+            {
+                if (list.Exists(x=>x.Name_EN==_mb.Name_EN) == false)
+                {
+                    list.Add(_mb);
+                }
+            }
+            string a = JsonConvert.SerializeObject(list);
+            WriteJsonFile(a);
+            Console.Clear();
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i].Name_EN +", "+list[i].Name_JP);
+            }
+            foreach (var l in list )
+            {
+                ImageDownloader(l.Pic_URL,l.Name_EN);
+            }
+            Console.WriteLine("done");
+            Console.ReadKey();
+            
+
+        }
+
+        static void OrderByLv(RaidBoss[] _rb)
+        {
+            int i, j;
+            var count = _rb.Length;
+            for (i = 1; i < _rb.Length; i++)
+            {
+                var t = _rb[i];
+                for (j= i-1; j >=0&&_rb[j].Level>t.Level; j--)
+                {
+                    _rb[j + 1] = _rb[j];
+                }
+                _rb[j + 1] = t;
+            }
+            
+        }
+
+        static void WriteJsonFile(string jsonText)
+        {
+            if (jsonText != null)
+            {
+                using (StreamWriter sw = new StreamWriter("newBoss.json", false))
+                {
+
+                    sw.WriteLine(jsonText);
+                    sw.Close();
                 }
             }
         }
 
-
-
-        static string JsonTextReader(string file)
+        static string  GetJsonString(string file)
         {
-            string jsonText;
-            using (System.IO.StreamReader sr = new System.IO.StreamReader(file))
+            string jsonText = null;
+            using (StreamReader sr = new StreamReader(file))
             {
                 jsonText = sr.ReadToEnd();
                 sr.Close();
             }
             return jsonText;
+        }
+
+        static void ImageDownloader(string url, string filename)
+        {
+            string foldName = Path.Combine(Environment.CurrentDirectory, "pics");
+            if (!Directory.Exists(foldName))
+            {
+                Directory.CreateDirectory(foldName);
+            }
+            if (File.Exists(Path.Combine(foldName,filename)))
+            {
+
+            }
+            else
+            {
+                HttpWebRequest hwr = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse response = (HttpWebResponse)hwr.GetResponse();
+                Stream stream = response.GetResponseStream();
+
+                FileStream fs = new FileStream(Environment.CurrentDirectory + "\\pics\\" + filename + ".jpg", FileMode.OpenOrCreate, FileAccess.Write);
+                byte[] buff = new byte[response.ContentLength];
+                int i = 0;
+                while ((i = stream.Read(buff, 0, buff.Length)) > 0)
+                {
+                    fs.Write(buff, 0, i);
+                }
+                fs.Close();
+                stream.Close();
+                fs.Dispose();
+                stream.Dispose();
+            }
         }
     }
 }

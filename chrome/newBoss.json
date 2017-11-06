@@ -1,0 +1,386 @@
+[
+    {
+        "Name_EN": "Lvl 30 Griffin",
+        "Name_JP": "Lv30 グリフォン",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqWxZGUIAASb34.jpg",
+        "Lv": 30
+    },
+    {
+        "Name_EN": "Lvl 30 Adversa",
+        "Name_JP": "Lv30 アドウェルサ",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cgc5UYAIhJoB.jpg",
+        "Lv": 30
+    },
+    {
+        "Name_EN": "Lvl 30 Ancient Dragon",
+        "Name_JP": "Lv30 エンシェントドラゴン",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cZ4ZUEAATMRc.jpg",
+        "Lv": 30
+    },
+    {
+        "Name_EN": "Lvl 30 Tiamat",
+        "Name_JP": "Lv30 ティアマト",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqWy2tUUAAr9yu.jpg",
+        "Lv": 30
+    },
+    {
+        "Name_EN": "Lvl 30 Will-o'-Wisp",
+        "Name_JP": "Lv30 ウィル･オ･ウィスプ",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cfCEUYAEtU95.jpg",
+        "Lv": 30
+    },
+    {
+        "Name_EN": "Lvl 30 Colossus",
+        "Name_JP": "Lv30 コロッサス",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqW62PUAAA6QTY.jpg",
+        "Lv": 30
+    },
+    {
+        "Name_EN": "Lvl 30 Phantom Fox",
+        "Name_JP": "Lv30 九尾の幻影",
+        "Pic_URL": "https://pbs.twimg.com/media/DNmk7HgVAAEnV3P.jpg",
+        "Lv": 30
+    },
+    {
+        "Name_EN": "Lvl 30 Yggdrasil",
+        "Name_JP": "Lv30 ユグドラシル",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqXDAQVIAAixiA.jpg",
+        "Lv": 30
+    },
+    {
+        "Name_EN": "Lvl 30 Celeste",
+        "Name_JP": "Lv30 セレスト",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cmzjUcAIvSo_.jpg",
+        "Lv": 30
+    },
+    {
+        "Name_EN": "Lvl 50 Tiamat Omega",
+        "Name_JP": "Lv50 ティアマト・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqXQA3UMAEMV7O.jpg",
+        "Lv": 50
+    },
+    {
+        "Name_EN": "Lvl 50 Leviathan",
+        "Name_JP": "Lv50 リヴァイアサン",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqW-MVUIAEJrDP.jpg",
+        "Lv": 50
+    },
+    {
+        "Name_EN": "Lvl 50 Adversa",
+        "Name_JP": "Lv50 アドウェルサ",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqXHXPUUAAh0PQ.jpg",
+        "Lv": 50
+    },
+    {
+        "Name_EN": "Lvl 50 Celeste",
+        "Name_JP": "Lv50 セレスト",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cmzjUcAIvSo_.jpg",
+        "Lv": 50
+    },
+    {
+        "Name_EN": "Lvl 50 Ninpress",
+        "Name_JP": "Lv50 九尾",
+        "Pic_URL": "https://pbs.twimg.com/media/DNmk_H-UQAAbe5E.jpg",
+        "Lv": 50
+    },
+    {
+        "Name_EN": "Lvl 50 Yggdrasil",
+        "Name_JP": "Lv50 ユグドラシル",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cbScU8AAgXRw.jpg",
+        "Lv": 50
+    },
+    {
+        "Name_EN": "Lvl 50 Colossus",
+        "Name_JP": "Lv50 コロッサス",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cUf8VEAEBaEb.jpg",
+        "Lv": 50
+    },
+    {
+        "Name_EN": "Lvl 50 Tiamat",
+        "Name_JP": "Lv50 ティアマト",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqWy2tUUAAr9yu.jpg",
+        "Lv": 50
+    },
+    {
+        "Name_EN": "Lvl 60 Yggdrasil Omega",
+        "Name_JP": "Lv60 ユグドラシル・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cDD3UkAEnP8Y.jpg",
+        "Lv": 60
+    },
+    {
+        "Name_EN": "Lvl 60 Leviathan Omega",
+        "Name_JP": "Lv60 リヴァイアサン・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqXTAQUAAAu3ox.jpg",
+        "Lv": 60
+    },
+    {
+        "Name_EN": "Lvl 70 Colossus Omega",
+        "Name_JP": "Lv70 コロッサス・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqXRjsUAAAwXTP.jpg",
+        "Lv": 70
+    },
+    {
+        "Name_EN": "Lvl 75 Celeste Omega",
+        "Name_JP": "Lv75 セレスト・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cGF4UYAAHBg5.jpg",
+        "Lv": 75
+    },
+    {
+        "Name_EN": "Lvl 75 Luminiera Omega",
+        "Name_JP": "Lv75 シュヴァリエ・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqXWAhUsAAprzd.jpg",
+        "Lv": 75
+    },
+    {
+        "Name_EN": "Lvl 100 Yggdrasil Omega",
+        "Name_JP": "Lv100 ユグドラシル・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/Cfv1i6wUsAAZajc.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Proto Bahamut",
+        "Name_JP": "Lv100 プロトバハムート",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cIKmUYAAPVmD.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Apollo",
+        "Name_JP": "Lv100 アポロン",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqXI0lVAAAQgcj.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Grand Order",
+        "Name_JP": "Lv100 ジ・オーダー・グランデ",
+        "Pic_URL": "https://pbs.twimg.com/media/CdL4YeiUEAI0JKW.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Medusa",
+        "Name_JP": "Lv100 メドゥーサ",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6ccesVEAAy_Kx.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Garuda",
+        "Name_JP": "Lv100 ガルーダ",
+        "Pic_URL": "https://pbs.twimg.com/media/CkVbhuqVEAA7e6K.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Macula Marius",
+        "Name_JP": "Lv100 マキュラ・マリウス",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqXAC1UIAAeGl-.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Grani",
+        "Name_JP": "Lv100 グラニ",
+        "Pic_URL": "https://pbs.twimg.com/media/CqwDXDkUMAAjCE5.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Raphael",
+        "Name_JP": "Lv100 ラファエル",
+        "Pic_URL": "https://pbs.twimg.com/media/C667BN2U4AEm6Qq.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Odin",
+        "Name_JP": "Lv100 オーディン",
+        "Pic_URL": "https://pbs.twimg.com/media/CqwDU_jUkAQjgKq.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Michael",
+        "Name_JP": "Lv100 ミカエル",
+        "Pic_URL": "https://pbs.twimg.com/media/C6668rmVsAAjpu1.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Dark Angel Olivia",
+        "Name_JP": "Lv100 Dエンジェル・オリヴィエ",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqXOjEUMAAXuK2.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Nezha",
+        "Name_JP": "Lv100 ナタク",
+        "Pic_URL": "https://pbs.twimg.com/media/CT6cOzzUwAESsq_.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Baal",
+        "Name_JP": "Lv100 バアル",
+        "Pic_URL": "https://pbs.twimg.com/media/CjLxhwmUoAEglVC.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Lich",
+        "Name_JP": "Lv100 リッチ",
+        "Pic_URL": "https://pbs.twimg.com/media/CqwDaPAVYAQAYzq.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Huanglong",
+        "Name_JP": "Lv100 黄龍",
+        "Pic_URL": "https://pbs.twimg.com/media/ClrgFhVVYAECRRD.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Uriel",
+        "Name_JP": "Lv100 ウリエル",
+        "Pic_URL": "https://pbs.twimg.com/media/C6664nkVAAASGPu.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Leviathan Omega",
+        "Name_JP": "Lv100 リヴァイアサン・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqZfExVIAA4YgF.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Gabriel",
+        "Name_JP": "Lv100 ガブリエル",
+        "Pic_URL": "https://pbs.twimg.com/media/C6667Y-V4AAge7r.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Colossus Omega",
+        "Name_JP": "Lv100 コロッサス・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CVL2CmeUwAAElDW.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Tiamat Omega Ayr",
+        "Name_JP": "Lv100 ティアマト・マグナ＝エア",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqW2SWUEAAMr7S.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Celeste Omega",
+        "Name_JP": "Lv100 セレスト・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CbTeWuMUUAIzFZl.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Luminiera Omega",
+        "Name_JP": "Lv100 シュヴァリエ・マグナ",
+        "Pic_URL": "https://pbs.twimg.com/media/CbTeQ1fVIAAEoqi.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Twin Elements",
+        "Name_JP": "Lv100 フラム＝グラス",
+        "Pic_URL": "https://pbs.twimg.com/media/CT_qpfCUsAA9vfF.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Athena",
+        "Name_JP": "Lv100 アテナ",
+        "Pic_URL": "https://pbs.twimg.com/media/Cg7oAJsUkAApRif.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 100 Qilin",
+        "Name_JP": "Lv100 黒麒麟",
+        "Pic_URL": "https://pbs.twimg.com/media/ClrgI8vUoAEhtoU.jpg",
+        "Lv": 100
+    },
+    {
+        "Name_EN": "Lvl 110 Rose Queen",
+        "Name_JP": "Lv110 ローズクイーン",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqZNDiUEAEkvHp.jpg",
+        "Lv": 110
+    },
+    {
+        "Name_EN": "Lvl 120 Gilgamesh",
+        "Name_JP": "Lv120 ギルガメッシュ",
+        "Pic_URL": "https://pbs.twimg.com/media/CqG0X1tUkAA5B8_.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Hector",
+        "Name_JP": "Lv120 ヘクトル",
+        "Pic_URL": "https://pbs.twimg.com/media/CyEeXQaUkAAVW1R.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Morrigna",
+        "Name_JP": "Lv120 バイヴカハ",
+        "Pic_URL": "https://pbs.twimg.com/media/Cucwk8yUEAAZzbO.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Anubis",
+        "Name_JP": "Lv120 アヌビス",
+        "Pic_URL": "https://pbs.twimg.com/media/CzcJDQgUoAAgX-J.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Ca Ong",
+        "Name_JP": "Lv120 カー・オン",
+        "Pic_URL": "https://pbs.twimg.com/media/Cs1w4gfUsAAwzdf.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Apollo",
+        "Name_JP": "Lv120 アポロン",
+        "Pic_URL": "https://pbs.twimg.com/media/CbTeO4fUkAEmmIN.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Prometheus",
+        "Name_JP": "Lv120 プロメテウス",
+        "Pic_URL": "https://pbs.twimg.com/media/CqG0bnLUkAAZpVs.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Medusa",
+        "Name_JP": "Lv120 メドゥーサ",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqZlIcVIAAp8e_.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Twin Elements",
+        "Name_JP": "Lv120 フラム＝グラス",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqZQ_pUEAAQFI4.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Macula Marius",
+        "Name_JP": "Lv120 マキュラ・マリウス",
+        "Pic_URL": "https://pbs.twimg.com/media/CYBkd_1UEAATH9J.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Dark Angel Olivia",
+        "Name_JP": "Lv120 Dエンジェル・オリヴィエ",
+        "Pic_URL": "https://pbs.twimg.com/media/CbTeSqbUcAARoNV.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 120 Nezha",
+        "Name_JP": "Lv120 ナタク",
+        "Pic_URL": "https://pbs.twimg.com/media/CfqW4BYUEAAeYSR.jpg",
+        "Lv": 120
+    },
+    {
+        "Name_EN": "Lvl 150 Proto Bahamut",
+        "Name_JP": "Lv150 プロトバハムート",
+        "Pic_URL": "https://pbs.twimg.com/media/CdL4WyxUYAIXPb8.jpg",
+        "Lv": 150
+    },
+    {
+        "Name_EN": "Lvl 150 Ultimate Bahamut",
+        "Name_JP": "Lv150 アルティメットバハムート",
+        "Pic_URL": "https://pbs.twimg.com/media/DFyjtXmUMAArFnp.jpg",
+        "Lv": 150
+    },
+    {
+        "Name_EN": "Lvl 200 Ultimate Bahamut",
+        "Name_JP": "Lv200 アルティメットバハムート",
+        "Pic_URL": "https://pbs.twimg.com/media/DFyjuvSUMAAqFbd.jpg",
+        "Lv": 200
+    }
+]
