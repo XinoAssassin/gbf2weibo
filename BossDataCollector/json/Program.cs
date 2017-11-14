@@ -29,21 +29,49 @@ namespace BossDataCollector
             {
                 mb[i] = new model.MyBoss();
 
-                if (rb[i].Name.Contains("Lvl"))
+                if (rb[i].TranslatedName != null)
                 {
-                    mb[i].Name_EN = rb[i].Name;
-                    mb[i].Name_JP = rb[i].TranslatedName.Value;
-                    
+                    if (rb[i].Language == "ENGLISH")
+                    {
+                        if (rb[i].Name != null)
+                        {
+                            mb[i].Name_EN = rb[i].Name;
+                        }
+                        if (rb[i].TranslatedName.Value != null)
+                        {
+                            mb[i].Name_JP = rb[i].TranslatedName.Value;
+                        }
+                    }
+                    else
+                    {
+                        if (rb[i].Name != null)
+                        {
+                            mb[i].Name_JP = rb[i].Name;
+                        }
+                        if (rb[i].TranslatedName.Value != null)
+                        {
+                            mb[i].Name_EN = rb[i].TranslatedName.Value;
+                        }
+                    }
                 }
                 else
                 {
-                    mb[i].Name_JP = rb[i].Name;
-                    mb[i].Name_EN = rb[i].TranslatedName.Value;
+                    if (rb[i].Language == "ENGLISH")
+                    {
+                        mb[i].Name_EN = rb[i].Name;
+                    }
+                    else
+                    {
+                        mb[i].Name_JP = rb[i].Name;
+                    }
                 }
+
                 mb[i].Lv = rb[i].Level;
                 mb[i].Pic_URL = rb[i].Image.Value;
                 Console.WriteLine("{0}, {1}", mb[i].Name_EN, mb[i].Name_JP);
             }
+            WriteJsonFile(JsonConvert.SerializeObject(mb),"test.json");
+
 
             List<model.MyBoss> list = new List<model.MyBoss>();
             foreach (var _mb in mb)
@@ -53,8 +81,7 @@ namespace BossDataCollector
                     list.Add(_mb);
                 }
             }
-            string a = JsonConvert.SerializeObject(list);
-            WriteJsonFile(a);
+            WriteJsonFile(JsonConvert.SerializeObject(list), "lastBossList.json");
             Console.Clear();
             for (int i = 0; i < list.Count; i++)
             {
@@ -62,7 +89,14 @@ namespace BossDataCollector
             }
             foreach (var l in list )
             {
-                ImageDownloader(l.Pic_URL,l.Name_EN);
+                if (l.Name_EN != null)
+                {
+                    ImageDownloader(l.Pic_URL, l.Name_EN);
+                }
+                else
+                {
+                    ImageDownloader(l.Pic_URL, l.Name_JP);
+                }
             }
             Console.WriteLine("done");
             Console.ReadKey();
@@ -86,11 +120,11 @@ namespace BossDataCollector
             
         }
 
-        static void WriteJsonFile(string jsonText)
+        static void WriteJsonFile(string jsonText,string newFileName)
         {
             if (jsonText != null)
             {
-                using (StreamWriter sw = new StreamWriter("newBoss.json", false))
+                using (StreamWriter sw = new StreamWriter(newFileName, false))
                 {
 
                     sw.WriteLine(jsonText);
